@@ -8,7 +8,13 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+你是一个数学计算助手，负责数学计算任务。请严格遵守以下逻辑步骤:
+1. 将输入问题转换为数学表达式。
+2. 计算表达式的结果。
+3. 输出结果，不要输出中间过程。
+"""
+
 
 
 USER_PROMPT = """
