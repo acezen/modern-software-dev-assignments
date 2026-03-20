@@ -28,6 +28,7 @@ Requirements:
 - Define the function is_valid_password(password: str) -> bool
 - Fix the specific issues mentioned in the test failures
 - Keep the implementation minimal and correct
+- Pay close attention to the "Failing checks" in the error log to understand exactly what criteria (length, upper/lower case, digits, special characters, whitespace) were missed.
 
 No explanations or comments, just the corrected code.
 """
@@ -111,7 +112,7 @@ def your_build_reflexion_context(prev_code: str, failures: List[str]) -> str:
 
     Return a string that will be sent as the user content alongside the reflexion system prompt.
     """
-    return "Pay close attention to the \"Failing checks\" in the error log to understand exactly what criteria (length, upper/lower case, digits, special characters, whitespace) were missed."
+    return ""
 
 
 def apply_reflexion(
