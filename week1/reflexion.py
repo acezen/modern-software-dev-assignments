@@ -111,7 +111,7 @@ def your_build_reflexion_context(prev_code: str, failures: List[str]) -> str:
 
     Return a string that will be sent as the user content alongside the reflexion system prompt.
     """
-    return ""
+    return "Pay close attention to the \"Failing checks\" in the error log to understand exactly what criteria (length, upper/lower case, digits, special characters, whitespace) were missed."
 
 
 def apply_reflexion(
