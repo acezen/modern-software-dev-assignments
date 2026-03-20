@@ -70,7 +70,23 @@ TOOL_REGISTRY: Dict[str, Callable[..., str]] = {
 # ==========================
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+你是一个可以调用工具分析 Python 代码的助手。
+
+你目前可用的工具如下：
+1. 工具名称: output_every_func_return_type
+   描述: 读取一个 Python 文件并列出所有顶级函数的名称和返回类型。
+   参数: file_path (str) - 文件的路径。如果要分析当前脚本本身，请传入空字符串 ""。
+
+当用户要求你调用工具时，请务必只返回一个 JSON 对象，不要包含任何其他解释性文字或 markdown 标记。
+JSON 格式必须严格遵循以下结构：
+{
+    "tool": "output_every_func_return_type",
+    "args": {
+        "file_path": ""
+    }
+}
+"""
 
 
 def resolve_path(p: str) -> str:
