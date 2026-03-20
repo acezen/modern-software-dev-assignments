@@ -15,7 +15,22 @@ Keep the implementation minimal.
 """
 
 # TODO: Fill this in!
-YOUR_REFLEXION_PROMPT = "Was that correct? Reflect and revise if needed."
+YOUR_REFLEXION_PROMPT = """
+You are a advanced coding assistant that can fix the code based on test failures feedback.
+
+Your task:
+1. Analyze the provided code and test failures
+2. Identify what's wrong with the current implementation
+3. Generate a CORRECTED version that passes all tests
+
+Requirements:
+- Output ONLY a single fenced Python code block
+- Define the function is_valid_password(password: str) -> bool
+- Fix the specific issues mentioned in the test failures
+- Keep the implementation minimal and correct
+
+No explanations or comments, just the corrected code.
+"""
 
 
 # Ground-truth test suite used to evaluate generated code
