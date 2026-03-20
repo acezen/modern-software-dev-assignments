@@ -7,7 +7,22 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """
+You are a word reverser.Reverse the order of letters in the given words. Only output the reversed word, no other text." \
+Here are some examples:
+<example>
+input: hello
+output: olleh
+</example>
+<example>
+input: world
+output: dlrow
+</example>
+<example>
+input: python
+output: nohtyp
+</example>
+"""
 
 USER_PROMPT = """
 Reverse the order of letters in the following word. Only output the reversed word, no other text:
